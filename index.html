@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Video 21</title>
+  </head>
+  <body>
+    <div>
+      <h3>CSS Specificity</h3>
+      <ol>
+        <li>Inline Style</li>
+        <li>ID Selector </li>
+        <li>Class Selector</li>
+        <li>attribute selector : such as - [date-x=1]</li>
+        <li>Universal Selector</li>
+      </ol>
+    </div>
+    <p>The Cascade Algorithm
+        CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+        
+        Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+        <br>
+        Position and order of appearance: the order in which your CSS rules appear
+        
+        <br><br> Specificity: an algorithm that determines which CSS selector has the strongest match
+        <br>
+        <br><br> Origin: the order in which CSS appears and where it comes from, whether that is a br
+        <br><br> browser style, CSS from a browser extension, or your authored CSS
+        br
+        <br><br> Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
+        br
+        <br><br> Lets look into all these one by one <br></p>br
+        <br>
+
+        <h2>CSS Specificity calculation</h2>
+        <p>
+            Specificity Calculation
+To calculate specificity, assign a value to each part of the selector:
+<br> 
+<br> Universal Selector: 0
+<br> Element selectors and pseudo-elements: 1
+<br> Class selectors, attribute selectors, and pseudo-classes: 10
+<br> ID selectors: 100
+<br> Inline styles: 1000
+<br> Then, add up the values of all the parts in the selector.
+
+Here is an example 
+        </p>
+
+<p>the specificity value calculation of this thing <br><br>
+    a.harry-class.roan-class[href]:hover{
+        color:blue;
+    }
+<br>
+calculation =a{1} + harry-class{10} + roan-class{10} + [href]{10} + :hover {10} = 41
+
+    </p>
+
+
+  </body>
 </html>
